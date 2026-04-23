@@ -11,6 +11,7 @@ public class Program
         Console.WriteLine(8.IsEven());
         Number = 46;
         Console.WriteLine(Number.IsEven());
+        7.IsOdd();
     }
 
 }
@@ -26,6 +27,20 @@ public static class EvenChecker
         else
         {
             return false;
+        }
+    }
+
+     public static bool IsOdd(this int Number)
+    {
+        if (Number % 2 == 0)
+        {
+            Console.WriteLine(false);
+            return false;
+        }
+        else
+        {
+           Console.WriteLine(true);
+            return true;        
         }
     }
 }
